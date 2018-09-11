@@ -1,0 +1,34 @@
+.btnSubmit{
+	width:150px;
+  margin-top:50px;
+}
+
+.frmAddJobApplication{
+	display:flex;
+  flex-direction:column;
+}
+
+.formContainer{
+	border:1px solid red;
+  width:50%
+}
+.historyContainer{
+	border:1px solid blue;
+  width:50%
+}
+
+.mainContainer{
+  border:1px solid black;
+  width:100%;
+  height:100%;
+  max-width:600px;
+  margin: 0 auto;
+  min-height:500px;
+  display:flex;
+}
+.companyName{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  
+}
