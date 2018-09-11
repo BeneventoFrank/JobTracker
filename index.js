@@ -1,11 +1,18 @@
 class Form extends React.Component {
     state = {
-      companyName:''
+      companyName:'',
+    dateContacted:''
   };
     handleSubmit = (event) => {
       event.preventDefault();
-    this.props.onSubmit({CompanyName: this.state.companyName});
+    this.props.onSubmit(
+                                            {
+                            CompanyName: this.state.companyName,
+                          DateContacted: this.state.dateContacted
+                        }
+                       );
     this.state.companyName = ''
+    this.state.dateContacted = ''
   };
   render(){
     return(
@@ -14,8 +21,10 @@ class Form extends React.Component {
           value = {this.state.companyName}
           onChange = {(event)=> this.setState({ companyName: event.target.value})}
           type='text' placeholder='Company Name' />
+          
           <input
-          ref={(input) => this.DateContacted = input}
+          value = {this.state.dateContacted}
+          onChange = {(event) => this.setState({dateContacted: event.target.value})}
           type='text' placeholder='Date Contacted' />
           <button className='btnSubmit' type='submit'> Add Company </button>
       </form>
@@ -25,7 +34,7 @@ class Form extends React.Component {
       const Job = (props) => {
   return(
       <div>
-          {props.CompanyName} 
+          {props.CompanyName} {props.DateContacted}  
       </div>
   )
 }
@@ -66,8 +75,8 @@ class Container extends React.Component {
   }
           state = {
       dataSet: [
-        {CompanyName: "Google",},
-        {CompanyName: "Netflix"}
+        {CompanyName: "Google",DateContacted:"1/1/2018"},
+        {CompanyName: "Netflix",DateContacted:"2/2/2018"}
       ]
   };
   render(){
