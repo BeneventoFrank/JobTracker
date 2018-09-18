@@ -1,13 +1,13 @@
 import React from 'react';
 import Job from './job';
-import X from './jobHeader';
+import Header from './jobHeader';
 
 const JobList = (props) => {
     return(
 
         <section>
 
-            <X />            
+            <Header />            
             <section className='companyName'>
                 {props.data.map(job => <Job {...job}/>)}
             </section> 

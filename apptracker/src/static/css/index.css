@@ -1,44 +1,40 @@
-.btnSubmit {
-    width: 150px;
-    margin-top: 50px;
-  }
-  
-  .frmAddJobApplication {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formContainer {
-    width: 30%;
-  }
-  .historyContainer {
-    width: 70%;
-  }
-  
-  .mainContainer {
-    width: 100%;
-    height: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
-    min-height: 500px;
-    display: flex;
-  }
-  .companyName {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .companyName div {
-    text-align: center;
-  }
-  
-  .job-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .job-header{
-    display: flex;
-  }
-  .job-category{
-    width: 25%;
-  }
+.job-container {
+  display: flex;
+  flex-direction: column;
+}
+.job-container .job-header {
+  display: flex;
+}
+.companyName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.companyName div {
+  text-align: center;
+}
+.historyContainer {
+  width: 70%;
+}
+.formContainer {
+  width: 30%;
+}
+.frmAddJobApplication {
+  display: flex;
+  flex-direction: column;
+}
+.frmAddJobApplication .btnSubmit {
+  width: 150px;
+  margin-top: 50px;
+}
+.job-category {
+  width: 25%;
+}
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  min-height: 500px;
+  display: flex;
+}
