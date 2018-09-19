@@ -74,7 +74,11 @@ class InputForm extends React.Component {
                 type="text"
                 placeholder="Follow Up Date"
               />
-      
+              <textarea id='txtLiked' rows="4" cols="50" placeholder="What did you like about this company?">
+              </textarea>
+              <textarea id='txtDisLiked' rows="4" cols="50" placeholder="What did you dislike about this company?">
+              </textarea>      
+              <textarea id='txtNote' rows="20" cols="50" placeholder="Notes"></textarea>
               <button className="btnSubmit" type="submit">
                 {" "}
                 Add Company{" "}

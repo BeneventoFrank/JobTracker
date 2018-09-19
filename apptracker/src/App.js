@@ -1,8 +1,8 @@
   import React from 'react';
   import './static/css/index.css';
-  import HistoryContainer from './components/historyContainer'
-  import FormContainer from './components/formContainer'
-
+  import HistoryContainer from './components/historyContainer';
+  import FormContainer from './components/formContainer';
+  import HeroHeader from './components/pageHeader.js';
 
 
   class Container extends React.Component {
@@ -33,7 +33,8 @@
             };
     render(){
             return(
-                  <section>
+                  <section class='appContainer'>
+                      <HeroHeader />
                       <section className='mainContainer'>
                           <FormContainer onSubmit={this.addNewCompany} />
                           <HistoryContainer data = {this.state.dataSet} />

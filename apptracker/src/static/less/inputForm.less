@@ -1,9 +1,30 @@
 .frmAddJobApplication {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    min-height: 700px;
+    padding-left:50px;
+    padding-right:50px;
+
     
     .btnSubmit {
         width: 150px;
         margin-top: 50px;
+        background-color: @yellowAccentColor;
+        color:@headerColor;
+        font-size: 1.1rem;
+    }
+    input {
+        line-height: 1.8rem;
+        border-radius: 3px;
+        box-shadow: @lightColor 1px 1px;
+    }
+    select{
+        height: 35px;
+        box-shadow: @lightColor 1px 1px;
+    }
+    textarea{
+        border-radius: 3px;
+        box-shadow: @lightColor 1px 1px;
     }
   }
