@@ -3,28 +3,23 @@ import React from 'react';
 const Job = (props) => {
     return(
 
-      <section>
-        <div className='job-row'>
-            <div className='job-text'>
-                <p>{props.CompanyName}</p>
+      <section className='job-card-container'>
+            <div className='job-card-description' >
+                <p className='job-text-header'>{props.CompanyName}</p>
+                <p className='job-text'>{props.DateContacted}</p>
+                <p className='job-text'>{props.JobSource}</p>
+                <p className='job-text'>{props.MethodOfContact}</p>
+                <p className='job-text'>{props.FollowUpDate}</p>
             </div>
-            <div className='job-text'>
-                <p>{props.DateContacted}</p>
+            <div className='job-card-textareas'>
+                <div>What you liked about the company:</div>
+                <div>{props.txtLiked}</div>
+                <div>What you disliked about the company:</div>
+                <div>{props.txtLiked}</div>                
+                <div>Notes:</div>
+                <div>{props.txtLiked}</div>                
             </div>
-            <div className='job-text'>
-                <p>{props.JobSource}</p>
-            </div>
-            <div className='job-text'>
-                <p>{props.MethodOfContact}</p>
-            </div>
-            <div className='job-text'>
-                <p>{props.FollowUpDate}</p>
-            </div>
-        </div>
       </section>
-
-
-
     )
 }
 
