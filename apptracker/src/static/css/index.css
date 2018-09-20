@@ -217,7 +217,6 @@ table {
 }
 .historyContainer {
   width: 70%;
-  padding-left: 20px;
   padding-right: 20px;
 }
 .formContainer {
@@ -225,6 +224,7 @@ table {
 }
 .frmAddJobApplication {
   display: flex;
+  position: fixed;
   flex-direction: column;
   justify-content: space-around;
   min-height: 700px;
