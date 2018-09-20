@@ -1,22 +1,35 @@
 
 .job-card-container{
-    width: 70%;
+    width: 90%;
     margin:0 auto;
-    border:1px solid black;
-    display: flex;
     margin-bottom:40px;
+    line-height: 1.8rem;
 
+    .job-card-company{
+        font-size:2rem;
+        border-bottom: 1px solid @yellowAccentColor;
+    }
+    .job-card-details{
+        display: flex;
+        width: 100%;
+        border-right:1px solid @yellowAccentColor;
+        padding:20px;
 
-    .job-card-description{
-        width: 40%;
-        .job-text-header{
-            font-size:2rem;
+        .job-text-data{
+            width: 40%;
+            .job-detail{
+                display:flex;
+            }
         }
     }
-    .job-card-textareas{
+    .job-card-text-area{
         width: 60%;
-        display: flex;
-        flex-direction: column;
+
+        .job-card-text-boxes{
+            border:1px solid #ccc;
+            height:150px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
     }
 
 }

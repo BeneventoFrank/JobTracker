@@ -7,7 +7,11 @@ class InputForm extends React.Component {
         dateContacted: "",
         jobSource: "",
         methodOfContact: "",
-        followUpDate: ""
+        followUpDate: "",
+        txtLiked:"",
+        txtDisLiked:"",
+        txtNote:""
+
     };
 
     handleSubmit = (event) => {
@@ -18,7 +22,10 @@ class InputForm extends React.Component {
                 DateContacted: this.state.dateContacted,
                 JobSource: this.state.jobSource,
                 MethodOfContact: this.state.methodOfContact,
-                FollowUpDate: this.state.followUpDate                
+                FollowUpDate: this.state.followUpDate,
+                txtLiked:this.state.txtLiked,
+                txtDisLiked:this.state.txtDisLiked,
+                txtNote:this.state.txtNote
             }
         );
         this.state.companyName = "";
@@ -26,11 +33,16 @@ class InputForm extends React.Component {
         this.state.jobSource = "";
         this.state.methodOfContact = "";
         this.state.followUpDate = "";
+        this.state.txtLiked = "";
+        this.state.txtDisLiked = "";
+        this.state.txtNote = "";
     };
 
     render(){
         return (
+            
             <form onSubmit={this.handleSubmit} className="frmAddJobApplication">
+              <p className='frmAddJobAppHeader'>New Contact</p>
               <input
                 value={this.state.companyName}
                 onChange={event => this.setState({ companyName: event.target.value })}
@@ -47,6 +59,7 @@ class InputForm extends React.Component {
               />
       
               <select
+                className='selectBorder'
                 onChange={event => this.setState({ jobSource: event.target.value })}
               >
                 <option value="-1">---Select Job Source---</option>
@@ -56,6 +69,7 @@ class InputForm extends React.Component {
               </select>
       
               <select
+                className='selectBorder'
                 onChange={event =>
                   this.setState({ methodOfContact: event.target.value })
                 }
