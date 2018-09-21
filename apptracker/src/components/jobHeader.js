@@ -9,7 +9,7 @@ const JobHeader = (props) => {
                 <p>Company Name</p>
             </div>
             <div className='job-category'>
-                <p>Date Contacted</p>
+                <p>Date Contactedssss</p>
             </div>
             <div className='job-category'>
                 <p>Job Source</p>
