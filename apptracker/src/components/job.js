@@ -11,7 +11,7 @@ const Job = (props) => {
             <div className='job-card-details'>
                 <div className='job-text-data'>
                     <div className='job-detail'>
-                        <div><p className='job-text-header'>Contactedss:&nbsp;</p></div>                        
+                        <div><p className='job-text-header'>Contacted:&nbsp;</p></div>                        
                         <div><p className='job-text'>{props.DateContacted}</p></div>
                     </div>
                     <div className='job-detail'>
