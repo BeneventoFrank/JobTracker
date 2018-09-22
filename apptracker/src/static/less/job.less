@@ -4,16 +4,21 @@
     margin:0 auto;
     margin-bottom:40px;
     line-height: 1.8rem;
+    display: flex;
+    padding-left:50px;
+    flex-direction: column;
 
     .job-card-company{
         font-size:2rem;
-        border-bottom: 1px solid @yellowAccentColor;
+        border-bottom:2px solid @frmBgColor;
     }
     .job-card-details{
         display: flex;
         width: 100%;
-        border-right:1px solid @yellowAccentColor;
+        border-right:2px solid @frmBgColor;
         padding:20px;
+        justify-content: space-between;
+
 
         .job-text-data{
             width: 40%;

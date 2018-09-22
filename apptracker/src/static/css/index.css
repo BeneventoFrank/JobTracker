@@ -184,16 +184,20 @@ table {
   margin: 0 auto;
   margin-bottom: 40px;
   line-height: 1.8rem;
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
 }
 .job-card-container .job-card-company {
   font-size: 2rem;
-  border-bottom: 1px solid #CCBC0C;
+  border-bottom: 2px solid #efeee3;
 }
 .job-card-container .job-card-details {
   display: flex;
   width: 100%;
-  border-right: 1px solid #CCBC0C;
+  border-right: 2px solid #efeee3;
   padding: 20px;
+  justify-content: space-between;
 }
 .job-card-container .job-card-details .job-text-data {
   width: 40%;
@@ -248,8 +252,9 @@ table {
   flex-direction: column;
   justify-content: space-around;
   min-height: 700px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #efeee3;
 }
 .frmAddJobApplication .frmAddJobAppHeader {
   font-size: 2rem;
