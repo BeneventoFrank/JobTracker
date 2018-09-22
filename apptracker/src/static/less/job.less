@@ -8,6 +8,13 @@
     padding-left:50px;
     flex-direction: column;
 
+
+    @media @mobile {
+        padding-left:15px;
+        padding-right: 15px;   
+      }
+  
+
     .job-card-company{
         font-size:2rem;
         border-bottom:2px solid @frmBgColor;
@@ -18,10 +25,19 @@
         border-right:2px solid @frmBgColor;
         padding:20px;
         justify-content: space-between;
+        
+        @media @mobile {
+            flex-direction: column;
+        }
 
 
         .job-text-data{
             width: 40%;
+            
+            @media @mobile {
+                width: 100%;
+            }
+    
             .job-detail{
                 display:flex;
             }
@@ -29,6 +45,12 @@
     }
     .job-card-text-area{
         width: 60%;
+
+        @media @mobile {
+            width: 100%;
+        }
+
+
         .job-card-text-boxes{
             border:1px solid #ccc;
             height:150px;

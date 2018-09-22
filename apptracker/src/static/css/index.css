@@ -188,6 +188,12 @@ table {
   padding-left: 50px;
   flex-direction: column;
 }
+@media (max-width:800px) {
+  .job-card-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .job-card-container .job-card-company {
   font-size: 2rem;
   border-bottom: 2px solid #efeee3;
@@ -199,14 +205,29 @@ table {
   padding: 20px;
   justify-content: space-between;
 }
+@media (max-width:800px) {
+  .job-card-container .job-card-details {
+    flex-direction: column;
+  }
+}
 .job-card-container .job-card-details .job-text-data {
   width: 40%;
+}
+@media (max-width:800px) {
+  .job-card-container .job-card-details .job-text-data {
+    width: 100%;
+  }
 }
 .job-card-container .job-card-details .job-text-data .job-detail {
   display: flex;
 }
 .job-card-container .job-card-text-area {
   width: 60%;
+}
+@media (max-width:800px) {
+  .job-card-container .job-card-text-area {
+    width: 100%;
+  }
 }
 .job-card-container .job-card-text-area .job-card-text-boxes {
   border: 1px solid #ccc;
@@ -229,10 +250,19 @@ table {
 }
 .historyContainer {
   width: 70%;
-  position: relative;
+}
+@media (max-width:800px) {
+  .historyContainer {
+    width: 100%;
+  }
 }
 .formContainer {
   width: 30%;
+}
+@media (max-width:800px) {
+  .formContainer {
+    width: 100%;
+  }
 }
 .new-contact-container {
   display: flex;
@@ -319,6 +349,13 @@ table {
   min-height: 500px;
   display: flex;
   margin-top: 90px;
+  flex-direction: row;
+}
+@media (max-width:800px) {
+  .appContainer .mainContainer {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
 }
 .heroHeader {
   background-color: #30ABAD;
