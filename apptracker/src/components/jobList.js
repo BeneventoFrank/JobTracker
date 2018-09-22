@@ -2,7 +2,6 @@ import React from 'react';
 import Job from './job';
 
 const JobList = (props) => {
-    console.log(props)
     return(
 
         <section>
