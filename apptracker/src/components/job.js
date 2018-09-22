@@ -34,10 +34,12 @@ const Job = (props) => {
                             <p className='job-text'>{props.txtLiked}</p>
                         </div>
                     </div>
+                    <br />
                     <div>   
                         <div><p className='job-text-header'>What you disliked about the company:&nbsp;</p></div>                        
                         <div className='job-card-text-boxes'><p className='job-text'>{props.txtDisLiked}</p></div>
                     </div>
+                    <br />
                     <div>   
                         <div><p className='job-text-header'>Notes:&nbsp;</p></div>                        
                         <div className='job-card-text-boxes'><p className='job-text'>{props.txtNotes}</p></div>
