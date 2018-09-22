@@ -4,7 +4,10 @@ const Job = (props) => {
     return(
 
       <section className='job-card-container'>
-
+            <div id='jobSpacer'>
+                <br />
+                <br />
+            </div>
             <div className='job-card-company'>
                 <p>{props.CompanyName}</p>
             </div>

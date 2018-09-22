@@ -22,6 +22,7 @@ class InputForm extends React.Component {
       document.querySelector('#txtCancel').classList.remove('hidden');
       document.querySelector('#imgCancel').classList.remove('hidden');
       document.querySelector('#txtCompanyName').focus();
+      document.querySelector('#jobSpacer').classList.add('hidden');
     }
     CancelNewContact = (event) =>{
       this.state.companyName = "";
@@ -37,6 +38,7 @@ class InputForm extends React.Component {
       document.querySelector('#txtCancel').classList.add('hidden');
       document.querySelector('#imgCancel').classList.add('hidden');
       document.querySelector('.frmAddJobApplication').classList.add('hidden');
+      document.querySelector('#jobSpacer').classList.remove('hidden');
     }
     
     

@@ -323,6 +323,11 @@ table {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width:800px) {
+  .frmAddJobApplication .formButtons {
+    margin-bottom: 50px;
+  }
+}
 .job-container {
   display: flex;
   flex-direction: column;
