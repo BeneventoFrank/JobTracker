@@ -4,7 +4,7 @@ const Job = (props) => {
     return(
 
       <section className='job-card-container'>
-            <div id='jobSpacer'>
+            <div className="job-spacer" id='jobSpacer'>
                 <br />
                 <br />
             </div>

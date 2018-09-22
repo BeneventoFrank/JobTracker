@@ -4,12 +4,11 @@ import Job from './job';
 const JobList = (props) => {
     return(
 
-        <section>
-            <section className='companyName'>
-                {props.data.map(job => <Job {...job}/>)}
-            </section> 
 
-        </section>
+        <section>
+            {props.data.map(job => <Job {...job}/>)}
+        </section> 
+
 
     )
   }

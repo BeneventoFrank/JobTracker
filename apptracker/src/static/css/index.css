@@ -194,6 +194,14 @@ table {
     padding-right: 15px;
   }
 }
+.job-card-container .job-spacer {
+  display: none;
+}
+@media (max-width:800px) {
+  .job-card-container .job-spacer {
+    display: block;
+  }
+}
 .job-card-container .job-card-company {
   font-size: 2rem;
   border-bottom: 2px solid #efeee3;
