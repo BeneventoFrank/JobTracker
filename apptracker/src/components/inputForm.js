@@ -82,6 +82,7 @@ class InputForm extends React.Component {
 
               <form onSubmit={this.handleSubmit} className="frmAddJobApplication hidden">
                   <input
+                    className='formPadding'
                     id='txtCompanyName'
                     value={this.state.companyName}
                     onChange={event => this.setState({ companyName: event.target.value })}
@@ -89,6 +90,7 @@ class InputForm extends React.Component {
                     placeholder="Company Name"
                   />
                   <input
+                    className='formPadding'
                     value={this.state.dateContacted}
                     onChange={event =>
                       this.setState({ dateContacted: event.target.value })
@@ -98,7 +100,7 @@ class InputForm extends React.Component {
                   />
           
                   <select
-                    className='selectBorder'
+                    className='selectBorder formPadding'
                     onChange={event => this.setState({ jobSource: event.target.value })}
                   >
                     <option value="-1">---Select Job Source---</option>
@@ -108,7 +110,7 @@ class InputForm extends React.Component {
                   </select>
           
                   <select
-                    className='selectBorder'
+                    className='selectBorder formPadding'
                     onChange={event =>
                       this.setState({ methodOfContact: event.target.value })
                     }
@@ -120,6 +122,7 @@ class InputForm extends React.Component {
                   </select>
           
                   <input
+                    className='formPadding'
                     value={this.state.followUpDate}
                     onChange={event =>
                       this.setState({ followUpDate: event.target.value })
@@ -127,11 +130,11 @@ class InputForm extends React.Component {
                     type="text"
                     placeholder="Follow Up Date"
                   />
-                  <textarea id='txtLiked' rows="4" cols="50" placeholder="What did you like about this company?">
+                  <textarea className='formPadding' id='txtLiked' rows="4" cols="50" placeholder="What did you like about this company?">
                   </textarea>
-                  <textarea id='txtDisLiked' rows="4" cols="50" placeholder="What did you dislike about this company?">
+                  <textarea className='formPadding' id='txtDisLiked' rows="4" cols="50" placeholder="What did you dislike about this company?">
                   </textarea>      
-                  <textarea id='txtNote' rows="20" cols="50" placeholder="Notes"></textarea>
+                  <textarea className='formPadding' id='txtNote' rows="20" cols="50" placeholder="Notes"></textarea>
                   <div className='formButtons'>
                     <button onClick={this.CancelNewContact} className="btnCancel" type="submit">Cancel</button>
                     <button className="btnSubmit" type="submit">Add Company</button>

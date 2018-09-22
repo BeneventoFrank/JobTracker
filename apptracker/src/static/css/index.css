@@ -286,6 +286,12 @@ table {
   border-radius: 3px;
   background-color: #efeee3;
 }
+@media (max-width:800px) {
+  .frmAddJobApplication .formPadding {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 .frmAddJobApplication .frmAddJobAppHeader {
   font-size: 2rem;
 }

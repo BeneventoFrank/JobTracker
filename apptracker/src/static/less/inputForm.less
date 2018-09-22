@@ -4,6 +4,7 @@
     align-items: center;
     font-size:2rem;
     cursor:pointer;
+    
 
 }
 .img-add-new-contact,.img-cancel-contact{
@@ -21,8 +22,12 @@
     border-radius: 3px;
     background-color: @frmBgColor;
 
-    //padding-left:50px;
-    //padding-right:50px;
+    @media @mobile{
+        .formPadding{
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+    }
 
     .frmAddJobAppHeader{
         font-size: 2rem;
