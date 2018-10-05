@@ -3,13 +3,15 @@ import Job from './job';
 
 const JobList = (props) => {
     return(
-
-
         <section>
-            {props.data.map(job => <Job {...job}/>)}
+            {
+                props.dataSet.map((element)=>{
+                    return(
+                        <Job dataSet={element} />
+                    )
+                })
+            }
         </section> 
-
-
     )
   }
 

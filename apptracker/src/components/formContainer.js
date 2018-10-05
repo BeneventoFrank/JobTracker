@@ -5,7 +5,12 @@ import InputForm from './inputForm';
 const FormContainer = (props) =>{
     return(
         <section className='formContainer'>
-            <InputForm onSubmit={props.onSubmit} />
+            <InputForm handleInputFormChanges={props.handleInputFormChanges} 
+                       addNewCompany={props.addNewCompany} 
+                       cancelNewContact={props.cancelNewContact} 
+                       addNewContact={props.addNewContact} 
+                       jobData={props.jobData} 
+                       />
         </section>
     )
 }
