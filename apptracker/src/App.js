@@ -1,5 +1,4 @@
   import React from 'react';
-  import {Helmet} from "react-helmet";
   import './static/css/index.css';
   import HistoryContainer from './components/historyContainer';
   import FormContainer from './components/formContainer';
@@ -8,6 +7,10 @@
 
 
   class Container extends React.Component {
+    constructor(){
+      super()
+    }
+
 
     addNewCompany = (newCompanyData) => {
       this.setState(prevState => ({ 
@@ -42,9 +45,6 @@
     render(){
             return(
                   <section className='appContainer'>
-                      <Helmet>
-                        <meta name="viewport" content="width=device-width, initial-scale=1" />
-                      </Helmet>
                       <HeroHeader />
                       <section className='mainContainer'>
                           <FormContainer onSubmit={this.addNewCompany} />
