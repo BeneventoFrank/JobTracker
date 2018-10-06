@@ -3,9 +3,7 @@
   import HistoryContainer from './components/historyContainer';
   import FormContainer from './components/formContainer';
   import HeroHeader from './components/pageHeader.js';
-  
-
-  
+ 
 
   class Container extends React.Component {
     constructor(){
