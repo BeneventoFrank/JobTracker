@@ -10,24 +10,30 @@
   class Container extends React.Component {
     constructor(){
       super()
+      let ds = JSON.parse(localStorage.getItem('dataSet'));
+      this.state = {
+        dataSet: ds?ds:[],
+        jobData:{
+                  companyName: "",
+                  dateContacted: "",
+                  jobSource: "",
+                  methodOfContact: "",
+                  followUpDate: "",
+                  txtLiked:"",
+                  txtDisLiked:"",
+                  txtNote:""
+                }
+      };
     }
-    state = {
-            dataSet: [],
-            jobData:{
-              companyName: "",
-              dateContacted: "",
-              jobSource: "",
-              methodOfContact: "",
-              followUpDate: "",
-              txtLiked:"",
-              txtDisLiked:"",
-              txtNote:""
-            }
-            };
+    SaveData(){
+      let data = JSON.stringify(this.state.dataSet);
+      localStorage.setItem('dataSet',data);
+    }            
     addNewCompany = event => {
       event.preventDefault();
       let newCompany = Object.assign({},this.state.jobData);
-      this.setState({dataSet: [...this.state.dataSet,newCompany]})
+      let data = [...this.state.dataSet,newCompany];
+      this.setState({dataSet: data},this.SaveData)
       this.ClearFormFields();
     }
     UpdateState(fieldname,data){
