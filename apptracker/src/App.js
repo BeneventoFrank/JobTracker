@@ -28,13 +28,26 @@
       event.preventDefault();
       let newCompany = Object.assign({},this.state.jobData);
       this.setState({dataSet: [...this.state.dataSet,newCompany]})
+      this.ClearFormFields();
     }
     UpdateState(fieldname,data){
       let tmpObj = Object.assign({},this.state.jobData);
       tmpObj[fieldname] = data
-      this.setState({jobData: tmpObj})
+      this.setState({'jobData': tmpObj})
     }
-
+    ClearFormFields(){
+      let tmpObj = {
+        companyName: "",
+        dateContacted: "",
+        jobSource: "-1",
+        methodOfContact: "-1",
+        followUpDate: "",
+        txtLiked:"",
+        txtDisLiked:"",
+        txtNote:""      
+      }
+      this.setState({'jobData': tmpObj})
+    }
     AddNewContact = (event) =>{
       document.querySelector('.frmAddJobApplication').classList.remove('hidden');
       document.querySelector('#txtNewContact').classList.add('hidden');
@@ -47,14 +60,7 @@
       this.UpdateState(event.target.id,event.target.value)
     }
     CancelNewContact = (event) =>{
-      this.UpdateState('companyName','') 
-      this.UpdateState('dateContacted','') 
-      this.UpdateState('jobSource','') 
-      this.UpdateState('methodOfContact','') 
-      this.UpdateState('followUpDate','') 
-      this.UpdateState('txtLiked','') 
-      this.UpdateState('txtDisLiked','') 
-      this.UpdateState('txtNote','') 
+      this.ClearFormFields();
       document.querySelector('#txtNewContact').classList.remove('hidden');
       document.querySelector('#imgNew').classList.remove('hidden');
       document.querySelector('#txtCancel').classList.add('hidden');
