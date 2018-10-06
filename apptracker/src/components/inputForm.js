@@ -68,7 +68,7 @@ const InputForm = props =>{
                   </textarea>      
                   <textarea value={props.jobData.txtNote} onChange={props.handleInputFormChanges} className='formPadding' id='txtNote' rows="20" cols="50" placeholder="Notes"></textarea>
                   <div className='formButtons'>
-                    <button onClick={props.handleCancelNewContact} className="btnCancel" type="submit">Cancel</button>
+                    <button onClick={props.cancelNewContact} className="btnCancel" type="submit">Cancel</button>
                     <button className="btnSubmit" type="submit">Add Company</button>
                   </div>
                 </form>

@@ -8,10 +8,18 @@
   class Container extends React.Component {
     constructor(){
       super()
-      let ds = JSON.parse(localStorage.getItem('dataSet'));
+      let ds = false;
+      try{
+        ds = JSON.parse(localStorage.getItem('dataSet'));
+      }
+      catch(error){
+        ds=[];        
+      }
+      
       this.state = {
         dataSet: ds?ds:[],
         jobData:{
+                  jobId:Date.now(),
                   companyName: "",
                   dateContacted: "",
                   jobSource: "",
@@ -33,6 +41,7 @@
       let data = [...this.state.dataSet,newCompany];
       this.setState({dataSet: data},this.SaveData)
       this.ClearFormFields();
+      this.HideInputFields();
     }
     UpdateState(fieldname,data){
       let tmpObj = Object.assign({},this.state.jobData);
@@ -41,6 +50,7 @@
     }
     ClearFormFields(){
       let tmpObj = {
+        jobId: Date.now(),
         companyName: "",
         dateContacted: "",
         jobSource: "-1",
@@ -65,13 +75,16 @@
     }
     CancelNewContact = (event) =>{
       this.ClearFormFields();
+      this.HideInputFields();
+    }
+    HideInputFields(){
       document.querySelector('#txtNewContact').classList.remove('hidden');
       document.querySelector('#imgNew').classList.remove('hidden');
       document.querySelector('#txtCancel').classList.add('hidden');
       document.querySelector('#imgCancel').classList.add('hidden');
       document.querySelector('.frmAddJobApplication').classList.add('hidden');
-
     }
+
     render(){
             return(
                   <section className='appContainer'>

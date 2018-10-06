@@ -5,7 +5,9 @@ const JobList = (props) => {
     return(
         <section>
             {
-                props.dataSet.map((element)=>{
+                props.dataSet.sort((a,b) =>{
+                    return a.jobId < b.jobId
+                }).map((element)=>{
                     return(
                         <Job dataSet={element} />
                     )
