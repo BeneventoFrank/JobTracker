@@ -10,6 +10,8 @@ const FormContainer = (props) =>{
                        cancelNewContact={props.cancelNewContact} 
                        addNewContact={props.addNewContact} 
                        jobData={props.jobData} 
+                       handleDisplayModal = {props.handleDisplayModal}
+                       showModal={props.showModal}
                        />
         </section>
     )

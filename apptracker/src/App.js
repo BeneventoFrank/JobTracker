@@ -17,6 +17,7 @@
       }
       
       this.state = {
+        showModal:false,
         dataSet: ds?ds:[],
         jobData:{
                   jobId:Date.now(),
@@ -31,6 +32,9 @@
                 }
       };
     }
+    handleDisplayModal= event =>{
+      this.setState({showModal:true})
+    }
     SaveData(){
       let data = JSON.stringify(this.state.dataSet);
       localStorage.setItem('dataSet',data);
@@ -42,6 +46,7 @@
       this.setState({dataSet: data},this.SaveData)
       this.ClearFormFields();
       this.HideInputFields();
+      this.setState({showModal:false})
     }
     UpdateState(fieldname,data){
       let tmpObj = Object.assign({},this.state.jobData);
@@ -76,6 +81,7 @@
     CancelNewContact = (event) =>{
       this.ClearFormFields();
       this.HideInputFields();
+      this.setState({showModal: false})
     }
     HideInputFields(){
       document.querySelector('#txtNewContact').classList.remove('hidden');
@@ -94,7 +100,9 @@
                                          jobData={this.state.jobData} 
                                          addNewCompany={this.addNewCompany} 
                                          addNewContact ={this.AddNewContact} 
-                                         cancelNewContact={this.CancelNewContact} />
+                                         cancelNewContact={this.CancelNewContact} 
+                                         handleDisplayModal={this.handleDisplayModal}
+                                         showModal={this.state.showModal}/>
                           <HistoryContainer dataSet = {this.state.dataSet} />
                       </section>
                   </section>
