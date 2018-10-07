@@ -6,8 +6,31 @@
     border-bottom:1px solid @yellowAccentColor;
     border-left:1px solid @yellowAccentColor;
     border-right:1px solid @yellowAccentColor; 
-    z-index: 1;
+    
 
+    .hero-container{
+        margin: 0 auto;
+        max-width:90%;
+        height:100%;
+        display: flex;
+        align-items: center;
+
+        .hero-add-new{
+            justify-content: flex-start;
+
+            .hero-add-new-button{
+                display: flex;
+                .new-contact-button{
+                    cursor: pointer;
+                }
+                .new-contact-text{
+                    color:white;
+                    font-size:2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 .hidden{
     display: none;
