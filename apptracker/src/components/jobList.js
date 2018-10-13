@@ -2,14 +2,15 @@ import React from 'react';
 import Job from './job';
 
 const JobList = (props) => {
+    console.log(props)
     return(
         <section>
             {
                 props.dataSet.sort((a,b) =>{
                     return a.jobId < b.jobId
-                }).map((element)=>{
+                }).map((element,index)=>{
                     return(
-                        <Job dataSet={element} />
+                        <Job key={index} dataSet={element} handleDeleteJobClick = {props.handleDeleteJobClick} />
                     )
                 })
             }

@@ -1,21 +1,32 @@
 import React from 'react';
+import Moment from 'moment';
 
 const Job = (props) => {
+    
+    let shortDateContacted = Moment(props.dataSet.dateContacted).format('MM DD YYYY');
+    let shortFollowUpDate = Moment(props.dataSet.followUpDate).format('MM DD YYYY');
 
     return(
+        
       <section className='job-card-container'>
             <div className="job-spacer" id='jobSpacer'>
                 <br />
                 <br />
             </div>
             <div className='job-card-company'>
-                <p>{props.dataSet.companyName}</p>
+                <div>
+                    <p>{props.dataSet.companyName}</p>
+                </div>
+                <div className='job-card-actions'>
+                    <p id={props.dataSet.jobId} onClick={props.handleDeleteJobClick} className='job-card-action-delete'>Delete</p>
+                </div>
+
             </div>
             <div className='job-card-details'>
                 <div className='job-text-data'>
                     <div className='job-detail'>
                         <div><p className='job-text-header'>Contacted:&nbsp;</p></div>                        
-                        <div><p className='job-text'>{props.dataSet.dateContacted}</p></div>
+                        <div><p className='job-text'>{shortDateContacted}</p></div>
                     </div>
                     <div className='job-detail'>
                         <div><p className='job-text-header'>Source:&nbsp;</p></div>                        
@@ -27,7 +38,7 @@ const Job = (props) => {
                     </div>
                     <div className='job-detail'>
                         <div><p className='job-text-header'>Follow Up Date:&nbsp;</p></div>                        
-                        <div><p className='job-text'>{props.dataSet.followUpDate}</p></div>
+                        <div><p className='job-text'>{shortFollowUpDate}</p></div>
                     </div>
                 </div>
                 <div className='job-card-text-area'>

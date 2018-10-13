@@ -1,67 +1,3 @@
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  background-color: #fffbf4;
-}
-html {
-  font-size: 62.5%;
-  height: 100%;
-  width: 100%;
-  font-family: 'Lato' !important;
-  color: #5A5353;
-}
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-input[type="select"]:focus,
-.uneditable-input:focus {
-  border-color: #30ABAD;
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-}
-.selectBorder:focus {
-  border-color: #30ABAD;
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
-}
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -190,6 +126,59 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fffbf4;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato' !important;
+  color: #5A5353;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="select"]:focus,
+.uneditable-input:focus {
+  border-color: #30ABAD;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+}
+.selectBorder:focus {
+  border-color: #30ABAD;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #30ABAD;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
 .job-card-container {
   width: 100%;
   margin: 0 auto;
@@ -304,7 +293,6 @@ table {
   justify-content: space-around;
   min-height: 700px;
   padding: 15px;
-  border-radius: 3px;
   background-color: #efeee3;
 }
 @media (max-width:800px) {
@@ -345,15 +333,6 @@ table {
 }
 .frmAddJobApplication .hidden {
   display: none;
-}
-.frmAddJobApplication .formButtons {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width:800px) {
-  .frmAddJobApplication .formButtons {
-    margin-bottom: 50px;
-  }
 }
 .job-container {
   display: flex;

@@ -4,7 +4,7 @@ import JobList from './jobList'
 const HistoryContainer = (props) => {
     return(
         <section className='historyContainer'>
-            <JobList dataSet = {props.dataSet}></JobList>
+            <JobList dataSet = {props.dataSet} handleDeleteJobClick = {props.handleDeleteJobClick}></JobList>
         </section>
   )
   }

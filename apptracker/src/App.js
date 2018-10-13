@@ -1,8 +1,8 @@
   import React from 'react';
   import './static/css/index.css';
   import HistoryContainer from './components/historyContainer';
-  import FormContainer from './components/formContainer';
   import HeroHeader from './components/pageHeader.js';
+  import Moment from 'moment';
  
 
   class Container extends React.Component {
@@ -15,22 +15,32 @@
       catch(error){
         ds=[];        
       }
-      
+
       this.state = {
         showModal:false,
         dataSet: ds?ds:[],
         jobData:{
                   jobId:Date.now(),
                   companyName: "",
-                  dateContacted: "",
+                  dateContacted: Moment(),
                   jobSource: "",
                   methodOfContact: "",
-                  followUpDate: "",
+                  followUpDate:'',
                   txtLiked:"",
                   txtDisLiked:"",
                   txtNote:""
                 }
       };
+
+    }
+    handleDeleteJobClick = event =>{
+      let data = this.state.dataSet.filter(element =>{
+        if(Number(element.jobId)!==Number(event.target.id)){
+          return element;
+        }
+      })
+      this.setState({dataSet:data},this.SaveData);
+
     }
     handleDisplayModal= event =>{
       this.setState({showModal:true})
@@ -57,10 +67,10 @@
       let tmpObj = {
         jobId: Date.now(),
         companyName: "",
-        dateContacted: "",
+        dateContacted: Moment(),
         jobSource: "-1",
         methodOfContact: "-1",
-        followUpDate: "",
+        followUpDate:'',
         txtLiked:"",
         txtDisLiked:"",
         txtNote:""      
@@ -86,24 +96,33 @@
     HideInputFields(){
       document.querySelector('#txtNewContact').classList.remove('hidden');
       document.querySelector('#imgNew').classList.remove('hidden');
-      document.querySelector('#txtCancel').classList.add('hidden');
-      document.querySelector('#imgCancel').classList.add('hidden');
       document.querySelector('.frmAddJobApplication').classList.add('hidden');
     }
-
+    
+    
+    HandleDatePickerChange = (data) =>{
+      this.UpdateState('dateContacted',data)
+    }
+    HandleFollowUpDatePickerChange = (data) =>{
+      this.UpdateState('followUpDate',data)
+    }
     render(){
             return(
                   <section className='appContainer'>
-                      <HeroHeader />
+                      <HeroHeader 
+                        jobData={this.state.jobData} 
+                        handleInputFormChanges={this.handleInputFormChanges} 
+                        handleDisplayModal={this.handleDisplayModal}
+                        showModal={this.state.showModal}
+                        HandleDatePickerChange ={this.HandleDatePickerChange}
+                        HandleFollowUpDatePickerChange = {this.HandleFollowUpDatePickerChange}
+                        addNewCompany={this.addNewCompany} 
+                        addNewContact ={this.AddNewContact}
+                        CancelNewContact = {this.CancelNewContact} 
+                      />
                       <section className='mainContainer'>
-                          <FormContainer handleInputFormChanges={this.handleInputFormChanges} 
-                                         jobData={this.state.jobData} 
-                                         addNewCompany={this.addNewCompany} 
-                                         addNewContact ={this.AddNewContact} 
-                                         cancelNewContact={this.CancelNewContact} 
-                                         handleDisplayModal={this.handleDisplayModal}
-                                         showModal={this.state.showModal}/>
-                          <HistoryContainer dataSet = {this.state.dataSet} />
+                          <HistoryContainer dataSet = {this.state.dataSet} 
+                                            handleDeleteJobClick={this.handleDeleteJobClick}/>
                       </section>
                   </section>
                   )
