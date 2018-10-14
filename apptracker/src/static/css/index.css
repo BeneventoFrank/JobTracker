@@ -263,14 +263,6 @@ input[type="select"]:focus,
 .job-row {
   display: flex;
 }
-.historyContainer {
-  width: 70%;
-}
-@media (max-width:800px) {
-  .historyContainer {
-    width: 100%;
-  }
-}
 .formContainer {
   width: 30%;
 }
@@ -351,16 +343,6 @@ input[type="select"]:focus,
 .appContainer {
   display: flex;
   flex-direction: column;
-}
-.appContainer .mainContainer {
-  width: 100%;
-  height: 100%;
-  max-width: 1250px;
-  margin: 0 auto;
-  min-height: 500px;
-  display: flex;
-  margin-top: 90px;
-  flex-direction: row;
 }
 @media (max-width:800px) {
   .appContainer .mainContainer {

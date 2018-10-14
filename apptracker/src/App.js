@@ -1,10 +1,10 @@
   import React from 'react';
   import './static/css/index.css';
-  import HistoryContainer from './components/historyContainer';
   import HeroHeader from './components/pageHeader.js';
   import Moment from 'moment';
+  import Styled from 'styled-components';
  
-
+  
   class Container extends React.Component {
     constructor(){
       super()
@@ -120,14 +120,125 @@
                         addNewContact ={this.AddNewContact}
                         CancelNewContact = {this.CancelNewContact} 
                       />
-                      <section className='mainContainer'>
-                          <HistoryContainer dataSet = {this.state.dataSet} 
-                                            handleDeleteJobClick={this.handleDeleteJobClick}/>
-                      </section>
+                      <HistoryContainer>
+                        <JobContact>
+
+                            <HorizontalLineContainer> 
+                              <HorizontalBottomLinedDiv>&nbsp;</HorizontalBottomLinedDiv><HorizontalSpacerDiv>&nbsp;</HorizontalSpacerDiv>
+                            </HorizontalLineContainer>
+
+                            <MiddleSection>
+
+                              <VerticalLineContainer>
+                                <VerticalLeftLinedDiv>
+                                  &nbsp;
+                                </VerticalLeftLinedDiv>
+                                <VerticalSpacerDiv>
+                                  &nbsp;
+                                </VerticalSpacerDiv>
+                              </VerticalLineContainer>
+                              
+                              <ContentContainer>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                                <MainContentSection>Main Content Section</MainContentSection>
+                              </ContentContainer>
+
+                              <VerticalLineContainer>
+                                <VerticalSpacerDiv>
+                                  &nbsp;
+                                </VerticalSpacerDiv>
+                                <VerticalRightLinedDiv>
+                                  &nbsp;
+                                </VerticalRightLinedDiv>
+                              </VerticalLineContainer>
+
+                            </MiddleSection>
+
+
+                            <HorizontalLineContainer> 
+                              <HorizontalSpacerDiv>&nbsp;</HorizontalSpacerDiv><HorizontalTopLinedDiv>&nbsp;</HorizontalTopLinedDiv>
+                            </HorizontalLineContainer>
+
+                        </JobContact>
+                      </HistoryContainer>
                   </section>
                   )
             }
   }
 
+const ContentContainer = Styled.div`
+  width:100%;
+  height:100%;
+` 
+const MainContentSection  = Styled.div`
+  border:1px solid green;
+  
+  height:100%;
+  width:100%;
+`
+const VerticalLineContainer = Styled.div`
+  display:flex;
+  flex-direction:column;
+`
+
+const MiddleSection = Styled.div`
+  width:100%;
+  height:100%;
+  border:1px solid blue;
+  display:flex;
+  flex-direction:row;
+`
+
+
+const HorizontalSpacerDiv=Styled.div`
+  width:50%;
+`
+const VerticalSpacerDiv = Styled.div`
+  height:50%;
+`
+const HorizontalBottomLinedDiv = Styled.div`
+  border-bottom:10px solid red;
+  width:50%;
+`
+const HorizontalTopLinedDiv = Styled.div`
+  border-top:10px solid red;
+  width:50%;
+`
+
+const VerticalLeftLinedDiv = Styled.div`
+  border-left:10px solid red;
+  height:50%;
+`
+const VerticalRightLinedDiv = Styled.div`
+  border-right:10px solid red;
+  height:50%;
+`
+
+
+const HorizontalLineContainer = Styled.div`
+  width:100%;
+  display:flex;
+`
+const JobContact = Styled.div`
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  padding-left:10px;
+  padding-right:10px;
+`
+const HistoryContainer = Styled.section`
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-top:75px;
+  flex-direction: column;
+  border:1px solid blue;
+`
 
   export default Container;
