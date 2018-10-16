@@ -1,0 +1,18 @@
+
+
+
+
+.header{
+    background-color:#30ABAD;
+    height:30px;
+}
+.newNoteSection{
+    display:flex;
+    flex-direction:column;
+    width:275px;
+    margin:0 auto;
+}
+.textArea{
+    width:275px;
+    font-size:1rem;
+}

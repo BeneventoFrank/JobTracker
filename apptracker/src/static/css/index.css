@@ -383,3 +383,6 @@ input[type="select"]:focus,
 .hidden {
   display: none;
 }
+.dragHover{
+  background-color:red !important;
+}
